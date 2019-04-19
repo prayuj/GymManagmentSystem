@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Measurment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Let's Go Fitness</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#" id="logout">Log out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="main.html">
+                                <span data-feather="home"></span>
+                                Dashboard <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">
+                                <span data-feather="file"></span>
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span data-feather="shopping-cart"></span>
+                                Measurements
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="attendance.html">
+                                <span data-feather="users"></span>
+                                Attendance
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payment.html">
+                                <span data-feather="bar-chart-2"></span>
+                                Payment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Measurements</h1>
+                </div>
+                <div style="height:auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Add measurments</h2>
+                            <p class="card-text" style="font-size:15px;">Add measurments for Chest, Shoulders, Arms,
+                                Waist, Hips, Thigh, Calf</p>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addMeasurments">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding:15px;">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Check Progress of all</h5>
+                                <a href="#" class="btn btn-info" id="allProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Shoulders Measurments</h5>
+                                <p class="card-text" id="shoulders">20 inches</p>
+                                <a href="#" class="btn btn-info" id="shoulderProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Arms Measurments</h5>
+                                <p class="card-text" id="arms">13 inches</p>
+                                <a href="#" class="btn btn-info" id="armsProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Waist Measurments</h5>
+                                <p class="card-text" id="waist">36 inches</p>
+                                <a href="#" class="btn btn-info" id="waistProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding:15px;">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Chest Measurments</h5>
+                                <p class="card-text" id="chest">40 inches</p>
+                                <a href="#" class="btn btn-info" id="chestProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Hips Measurments</h5>
+                                <p class="card-text" id="hips">40 inches</p>
+                                <a href="#" class="btn btn-info" id="hipsProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Thigh Measurments</h5>
+                                <p class="card-text" id="thigh">20 inches</p>
+                                <a href="#" class="btn btn-info" id="thighProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Calf Measurments</h5>
+                                <p class="card-text" id="calf">20 inches</p>
+                                <a href="#" class="btn btn-info" id="calfProgress">See Progress</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <div class="modal fade" id="addMeasurments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Measurement</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label>Date</label><input type="date" id="dateTaken"><br>
+                            <label>Chest</label><input type="text" id="chestInput"><br>
+                            <label>Shoulders</label><input type="text" id="shouldersInput"><br>
+                            <label>Arms</label><input type="text" id="armsInput"><br>
+                            <label>Waist</label><input type="text" id="waistInput"><br>
+                            <label>Hips</label><input type="text" id="hipsInput"><br>
+                            <label>Thigh</label><input type="text" id="thighInput"><br>
+                            <label>Calf</label><input type="text" id="calfInput"><br>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="submit">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" tabindex="-1" role="dialog" id="result">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="resultTitle"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="resultBody">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" tabindex="-1" role="dialog" id="graph">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div id="chartContainer"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Bootstrap core JavaScript==================================================-->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/measurment.js"></script>
+        <script src="../js/graph.js"></script>
+        <script src="../js/logout.js"></script>
+        <script src="../js/reroute.js"></script>
+
+        <!-- Icons -->
+        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+        <script>
+            feather.replace()
+        </script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a
+                title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website_letsgofitness&amp;utm_content=footer_img"><img
+                    src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div>
+
+</body>
+
+</html>
